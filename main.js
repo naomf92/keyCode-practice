@@ -12,8 +12,20 @@ let y = 0;
 
 function charaCommand(e) {
 
-  const element = document.querySelector(`#fairly[data-key="${e.keyCode}"]`);
+  const element = document.querySelector('#fairly');
   console.log(element);
+
+  if (e.keyCode === 38) {
+    console.log("up");
+  } else if (e.keyCode === 39) {
+    console.log("right");
+  } else if (e.keyCode === 40) {
+    console.log("down");
+  } else if (e.keyCode === 37) {
+    console.log("left");
+  } else {
+    console.log(e.keyCode);
+  }
 
   // ↑キー: キー番号38
   // →キー: キー番号39
@@ -24,7 +36,6 @@ function charaCommand(e) {
 }
 window.addEventListener('keydown',charaCommand);
 
-// element.getBoundingClientRect();
 
 
 
