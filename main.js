@@ -7,8 +7,12 @@
 // keyCode、イベント、テンプレートリテラル、引数を必ず使用します。
 
 // 座標x軸とy軸の初期値
+
 let x = 0;
 let y = 0;
+
+// DOMElement.style.top = x + 'px';
+
 
 function charaCommand(e) {
 
@@ -16,13 +20,21 @@ function charaCommand(e) {
   console.log(element);
 
   if (e.keyCode === 38) {
-    console.log("up");
+
+    element.style.top = x + `${++x}px`;
+
   } else if (e.keyCode === 39) {
-    console.log("right");
+
+    element.style.left = y + `${++y}px`;
+    
   } else if (e.keyCode === 40) {
-    console.log("down");
+  
+    element.style.top = x + `${--x}px`;
+
   } else if (e.keyCode === 37) {
-    console.log("left");
+ 
+    element.style.left = x + `${--x}px`;
+
   } else {
     console.log(e.keyCode);
   }
