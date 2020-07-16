@@ -33,7 +33,7 @@ function charaCommand(e) {
 
   } else if (e.keyCode === 37) {
  
-    element.style.left = x + `${--x}px`;
+    element.style.left = y + `${--y}px`;
 
   } else {
     console.log(e.keyCode);
