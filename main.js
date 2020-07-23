@@ -17,16 +17,16 @@ function charaCommand(e) {
   console.log(element);
 
   if (e.keyCode === 38) {
-    y = y + 50;
+    y += 50;
     // 前置インクリメントは、今の反映結果だと不規則にtopが追加されていますので、y = y + px数; とすると指定したpxの数通りにスタイルが付与されます
     // 上記の記述でも良いですが、上記の記述は y =- px数値; と省略できます
     // topは上に詰め物をするので、キャラクター要素を下に移動させます。つまり上下の配置移動ということで、y軸を使うという意味で変数yを使用した方が良いです    x + `${++x}px`;
   } else if (e.keyCode === 39) {
-    x = x + 50;
+    x += 50;
   } else if (e.keyCode === 40) {
-    y = y - 50;
+    y -= 50;
   } else if (e.keyCode === 37) {
-    x = x - 50;
+    x -= 50;
   } else {
     console.log(e.keyCode);
   }
